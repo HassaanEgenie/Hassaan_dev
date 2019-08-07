@@ -24,7 +24,7 @@ class Slides extends CI_Controller
         } else {
 
             $action = $this->input->post('action');
-         
+
             if ($action == "delete") {
                 //delete
                 $slide_id = $this->input->post('slide_id');

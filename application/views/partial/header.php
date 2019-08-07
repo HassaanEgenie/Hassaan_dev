@@ -98,19 +98,26 @@
                                 <a class="nav-link" href="<?php echo base_url("sliders"); ?>">Sliders</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
+                                <a class="nav-link" href="<?php echo base_url("Pages"); ?>">Pages</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown link
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url("Users"); ?>">Users</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url("Socialmedia"); ?>">Socialmedia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url("Table"); ?>">Table</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url("Algebra"); ?>">Algebra</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url("Pythagoras"); ?>">Pythagoras Theorem</a>
+                            </li>
+
+
+
                         </ul>
                     </div>
                 </nav>

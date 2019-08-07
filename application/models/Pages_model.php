@@ -11,6 +11,7 @@ class Pages_model extends CI_Model
 
     public function get_pages_data()
     {
+
         $query = $this->db->get('pages');
         return $query->result_array();
     }

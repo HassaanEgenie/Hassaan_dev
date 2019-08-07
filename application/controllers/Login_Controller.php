@@ -6,7 +6,9 @@ class Login_Controller extends CI_Controller
 
     public function index()
     {
-        $this->load->model('Main_model');
+
+        $this->load->model('Admin_model');
+        $this->load->library('session');
         $this->load->library("form_validation");
         $this->form_validation->set_rules('Name', 'Name', 'required');
         $this->form_validation->set_rules('Email', 'Country', 'required');
@@ -19,20 +21,27 @@ class Login_Controller extends CI_Controller
             $this->load->view('partial/footer');
 
         } else {
+            $admin_data = $this->Admin_model->get_adminid_data('1'); // $user_data['slug']
+            $data['admin_data'] = $admin_data[0];
+
             $Name = $this->input->post('Name');
             $Email = $this->input->post('Email');
             $password = $this->input->post('password');
 
-            $data_to_insert = array();
-            $data_to_insert['Name'] = $Name;
-            $data_to_insert['password'] = $password;
-            $data_to_insert['Email'] = $Email;
+            if ($Name == $admin_data[0]['name']) {
+                if ($password == $admin_data[0]['password']) {
+                    redirect("Admin_controller");
+                } else {
+                    $this->session->set_flashdata('password_error', 'Enter correct password');
+                    redirect("Login_Controller");
+                }
 
-            $this->Main_model->insert_user_into_DB($data_to_insert);
-            redirect("User_controller");
-            // $this->load->view('partial/header');
-            // $this->load->view('Loginview.php');
-            // $this->load->view('partial/footer');
+            } else {
+                $this->session->set_flashdata('name_error', 'Enter correct username');
+                //$this->session->flashdata('message_name');
+                redirect("Login_Controller");
+
+            }
 
         }
 

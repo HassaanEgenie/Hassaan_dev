@@ -13,7 +13,7 @@
 
     <style>
     </style>
-    
+
     <div class="container">
         <div class="Hello">
             <form class="form-container" id="input_form" method="post">
@@ -25,6 +25,7 @@
                         <div class="form-group">
                             <label>Username</label>
                             <input type="text" name="Name" placeholder="Username" class="form-control">
+                            <span><?php echo ($this->session->flashdata('name_error')); ?></span>
                             <?php echo form_error('Name'); ?>
                         </div>
                     </div>
@@ -45,6 +46,7 @@
                             <label>Password</label>
                             <input type="password" id="pass" name="password" minlength="8" placeholder="Password"
                                 class="form-control">
+                            <span><?php echo ($this->session->flashdata('password_error')); ?></span>
                             <? echo form_error("password"); ?>
                         </div>
                     </div>

@@ -53,6 +53,7 @@ class Pages extends CI_Controller
                 $pages_id = $this->input->post('pages_id');
                 $update_status['status'] = 0;
                 $this->pages_model->activate($pages_id, $update_status);
+                redirect(base_url("pages/index"));
 
             } else {
 

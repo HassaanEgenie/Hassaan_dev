@@ -33,13 +33,13 @@
         </div>
 
         <div class="row justify-content-center">
-                <div class="col-md-6">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label>slug</label>
                     <input type="text" name="slug" placeholder="slug" class="form-control">
                     <?php echo form_error('slug'); ?>
                 </div>
-                </div>
+            </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label>meta_copyright</label>
@@ -47,7 +47,7 @@
                     <? echo form_error("meta_copyright"); ?>
                 </div>
             </div>
-            </div>
+        </div>
 
 
 
