@@ -7,15 +7,17 @@ $a = $algebra['a'];
 $b = $algebra['b'];
 
 $res = ($a * $a) + ($b * $b) + 2 * ($a * $b);
-echo "(";
-echo $a;
-echo "+";
-echo $b;
-echo ")";
-echo "<sup>2</sup>";
-echo "=";
-
-echo $res;
+echo "<label>value of a</label>";
+echo "<br>";
+echo "<input value=" . $a . ">";
+echo "<br>";
+echo "<label>value of b</label>";
+echo "<br>";
+echo "<input value=" . $b . ">";
+echo "<br>";
+echo "<label>Result</label>";
+echo "<br>";
+echo "<input value=" . $res . ">";
 
 ?>
 

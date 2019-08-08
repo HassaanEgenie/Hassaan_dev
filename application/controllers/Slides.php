@@ -165,7 +165,7 @@ class Slides extends CI_Controller
                 move_uploaded_file($file_tmp, "assets/img/" . $file_name);
             }
 
-            $data_to_insert = array();
+            $data_to_update = array();
             $data_to_update['slide_title'] = $updated_title;
             $data_to_update['slide_description'] = $updated_description;
             $data_to_update['slide_status'] = $updated_status;
